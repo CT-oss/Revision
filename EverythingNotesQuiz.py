@@ -298,3 +298,16 @@ if __name__ == "__main__":
     print("Welcome to the Comprehensive Quiz!\n")
     shuffled_quiz = shuffle_quiz(quiz_data)
     take_quiz(shuffled_quiz)
+
+        # Ask if the user wants to retake the quiz
+    retake = input("\nWould you like to retake the quiz? (y/n): ").strip().lower()
+    if retake == 'y':
+        take_quiz(shuffle_quiz(quiz_data))
+    else:
+        print("\nThank you for taking the quiz. Goodbye!")
+
+if __name__ == "__main__":
+    print(title)
+    print("Welcome to the Security and Learning Quiz!\n")
+    shuffled_quiz = shuffle_quiz(quiz_data)
+    take_quiz(shuffled_quiz)
