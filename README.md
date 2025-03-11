@@ -29,4 +29,6 @@ https://www.online-python.com/
 
 as the terminal.
 
-You need to download the script corrisponding to the notes you want to cover, you then run the file either in a command line or using the python application. Due to the scripts being simple, they can run in any terminal.
+You need to download the script corrisponding to the notes you want to cover, you then run the file either in a command line or using the python application. Due to the scripts being simple, they can run in any terminal. 
+
+Message me if there is a question wrong / bug in the code
