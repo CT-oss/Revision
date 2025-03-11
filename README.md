@@ -15,4 +15,10 @@ Firewalls + Internet security - https://docs.google.com/document/d/1PhteuwjE1ZuG
 
 Ai was used to generate the questions and the script
 
-To use a quiz make sure you have python installed on your device, quizes are multiple choice and they will tell you what you got wrong and what you need to improve on
+If you do not have python installed / dont want to / dont know how to, you can either follow an tutorial such as 
+
+https://www.pythonguis.com/installation/install-python-windows/
+
+or you can use
+
+https://www.online-python.com/
