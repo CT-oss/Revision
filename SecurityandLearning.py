@@ -12,7 +12,7 @@ title = r"""
                                   |___/                                           |___/                           
 """
 
-# Quiz data based on your topics
+# Quiz data with original and new True or False questions
 quiz_data = [
     {
         "question": "What is the primary purpose of the GDPR?",
@@ -101,6 +101,61 @@ quiz_data = [
             "Design modelling"
         ],
         "explanation": "Eavesdropping is a common misuse of the internet, where unauthorized parties intercept private communications."
+    },
+    # New True or False Questions
+    {
+        "question": "The GDPR is designed to protect personal data and privacy for individuals within the European Union.",
+        "answer": "1",
+        "options": ["True", "False"],
+        "explanation": "The GDPR (General Data Protection Regulation) is a regulation in EU law that focuses on data protection and privacy for individuals within the European Union."
+    },
+    {
+        "question": "The Computer Misuse Act 1990 only addresses unauthorized access to computer systems and does not cover data alteration or computer fraud.",
+        "answer": "2",
+        "options": ["True", "False"],
+        "explanation": "The Computer Misuse Act 1990 covers unauthorized access, data alteration, and computer fraud, making it a comprehensive law for addressing cybercrime."
+    },
+    {
+        "question": "Non-functional testing focuses on evaluating security, performance, and usability rather than specific functionalities of software.",
+        "answer": "1",
+        "options": ["True", "False"],
+        "explanation": "Non-functional testing evaluates aspects like security, performance, and usability, ensuring the software meets quality standards beyond just functionality."
+    },
+    {
+        "question": "Data normalization is a key concept in SQL that involves organizing data to reduce redundancy and improve data integrity.",
+        "answer": "1",
+        "options": ["True", "False"],
+        "explanation": "Data normalization is a process in SQL that organizes data to minimize redundancy and ensure data integrity."
+    },
+    {
+        "question": "The first stage of Kolb’s Experiential Learning Cycle is 'Abstract Conceptualization.'",
+        "answer": "2",
+        "options": ["True", "False"],
+        "explanation": "The first stage of Kolb’s Experiential Learning Cycle is 'Concrete Experience,' where the learner engages in a new experience or interprets an existing one."
+    },
+    {
+        "question": "Design thinking focuses on enforcing data protection laws rather than solving end-user problems iteratively.",
+        "answer": "2",
+        "options": ["True", "False"],
+        "explanation": "Design thinking is a problem-solving approach that focuses on understanding end-user needs and iteratively developing solutions."
+    },
+    {
+        "question": "Eavesdropping is a common misuse of the internet where unauthorized parties intercept private communications.",
+        "answer": "1",
+        "options": ["True", "False"],
+        "explanation": "Eavesdropping involves intercepting private communications without authorization, which is a misuse of internet resources."
+    },
+    {
+        "question": "The dark web is a part of the internet that can be found on search engines such as google.",
+        "answer": "2",
+        "options": ["True", "False"],
+        "explanation": "The dark web is a part of the internet that is not indexed by search engines and requires specific software (like Tor) to access."
+    },
+    {
+        "question": "Data visualization techniques are not important for aligning information with audience needs.",
+        "answer": "2",
+        "options": ["True", "False"],
+        "explanation": "Data visualization techniques are crucial for presenting data in a way that aligns with the audience's needs and enhances understanding."
     }
 ]
 
@@ -122,7 +177,7 @@ def take_quiz(data):
         for j, option in enumerate(question['options'], 1):
             print(f"{j}. {option}")
         user_answer = input("Your answer (enter the number): ")
-        if question['options'][int(user_answer) - 1] == question['answer']:
+        if question['options'][int(user_answer) - 1].split(".")[0] == question['answer']:
             print("Correct!")
             print(f"Explanation: {question['explanation']}\n")
             score += 1
@@ -136,7 +191,7 @@ def take_quiz(data):
 
     # Display revision feedback
     if incorrect_answers:
-        print("\nYou need to revise the following topics:")
+        print("\nHere are the questions you got wrong (revise these topics):")
         for question in incorrect_answers:
             print(f"- {question}")
     else:
