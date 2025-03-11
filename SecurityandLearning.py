@@ -142,6 +142,13 @@ def take_quiz(data):
     else:
         print("\nGreat job! You answered all questions correctly.")
 
+    # Ask if the user wants to retake the quiz
+    retake = input("\nWould you like to retake the quiz? (y/n): ").strip().lower()
+    if retake == 'y':
+        take_quiz(shuffle_quiz(quiz_data))
+    else:
+        print("\nThank you for taking the quiz. Goodbye!")
+
 if __name__ == "__main__":
     print(title)
     print("Welcome to the Security and Learning Quiz!\n")
