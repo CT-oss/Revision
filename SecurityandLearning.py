@@ -117,7 +117,7 @@ quiz_data = [
     },
     {
         "question": "Non-functional testing focuses on evaluating security, performance, and usability rather than specific functionalities of software.",
-        "answer": "1",
+        "answer": "2",
         "options": ["True", "False"],
         "explanation": "Non-functional testing evaluates aspects like security, performance, and usability, ensuring the software meets quality standards beyond just functionality."
     },
